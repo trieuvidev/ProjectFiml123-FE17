@@ -1,0 +1,69 @@
+.ds_phim{
+    width: 80%;
+    margin: 0 auto;
+}
+.dsPhim{
+    padding: 20px 10px;
+    position: relative;
+}
+.hover_item_phim .icon_play_phim{
+        font-size: 15px;
+        color: #ffffff;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border: 1px solid #ffffff;
+        border-radius:50%;
+        position: absolute;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        -ms-border-radius:50%;
+        -o-border-radius:50%;
+        top: 35%;
+        left: 42%;
+}
+.hover_item_phim, .btn_mua_ve{
+    display: none;
+}
+.dsPhim:hover .hover_item_phim{
+    display: block;
+    transition: 3s;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+}
+.dsPhim:hover .btn_mua_ve{
+    display: block;
+    transition: 3s;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+}
+.btn_mua_ve{
+    width: 250px;
+    background-color: #fb4226;
+    position: absolute;
+    top: 80%;
+}
+.card-body{
+        padding: 20px 0;
+        padding-bottom: 0;
+        display: block;
+}
+.dsPhim:hover .card-body{
+    display: none;
+}
+.dsPhim:hover{
+    background: linear-gradient(to top,#000,transparent 100%);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.icon_play_phim a{
+    color: #ffffff;
+}

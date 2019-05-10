@@ -1,0 +1,19 @@
+<div class="container-fluid ds_phim">
+  <h3 class="display-4">Quản lý danh sách phim</h3>
+  <div class="row">
+    <div class="col-md-3 dsPhim" *ngFor="let phim of DSPhim">
+      <app-item-phim [phim]="phim"></app-item-phim>
+      <div class="card-body">
+        <h6 class="card-title">{{phim.TenPhim}}</h6>
+        <p>{{phim.NgayKhoiChieu}}</p>
+        <p class="card-text">{{phim.Mota}}</p>
+      </div>
+      <button class="btn btn-danger btn_mua_ve">Mua Vé</button>
+      <div class="hover_item_phim">
+        <div class="icon_play_phim">
+          <a href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
