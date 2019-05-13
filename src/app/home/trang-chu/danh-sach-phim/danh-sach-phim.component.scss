@@ -67,3 +67,10 @@
 .icon_play_phim a{
     color: #ffffff;
 }
+#summary .readmore.collapsed:after  {
+    content: '+ Read More';
+}
+
+#summary a:not(.collapsed):after {
+    content: '- Read Less';
+}

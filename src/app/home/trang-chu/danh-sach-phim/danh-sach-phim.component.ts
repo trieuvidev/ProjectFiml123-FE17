@@ -14,7 +14,6 @@ export class DanhSachPhimComponent implements OnInit, OnDestroy {
   subService: Subscription;
   Subscription: any;
   DSPhim: any = [];
-  // mangPhim: DSPhim [] = [];
 
   constructor(private dsPhim: LayDanhSachPhimService) { }
 
@@ -30,7 +29,5 @@ export class DanhSachPhimComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subService.unsubscribe(); // hủy theo doi bien observable
   }
-
-
 
 }

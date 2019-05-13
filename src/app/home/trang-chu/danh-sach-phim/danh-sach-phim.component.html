@@ -1,7 +1,7 @@
-<div class="container-fluid ds_phim">
+<div class="container-fluid ds_phim ">
   <h3 class="display-4">Quản lý danh sách phim</h3>
   <div class="row">
-    <div class="col-md-3 dsPhim" *ngFor="let phim of DSPhim">
+    <div class="col-md-3 dsPhim collapse-group" *ngFor="let phim of DSPhim">
       <app-item-phim [phim]="phim"></app-item-phim>
       <div class="card-body">
         <h6 class="card-title">{{phim.TenPhim}}</h6>
@@ -15,5 +15,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  
 </div>
