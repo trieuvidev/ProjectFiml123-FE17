@@ -14,12 +14,13 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { MaterialAngularModule } from '../Share/material-angular.module';
 import { FormsModule } from '@angular/forms';
+import { DangNhapComponent } from './trang-chu/dang-nhap/dang-nhap.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  declarations: [TrangChuComponent, HeaderComponent, FooterComponent, TrangChiTietComponent, SliderComponent, DanhSachPhimComponent, ItemPhimComponent, LichChieuComponent, ThongTinPhimComponent, DanhGiaPhimComponent, HomeComponent],
+  declarations: [TrangChuComponent, HeaderComponent, FooterComponent, TrangChiTietComponent, SliderComponent, DanhSachPhimComponent, ItemPhimComponent, LichChieuComponent, ThongTinPhimComponent, DanhGiaPhimComponent, HomeComponent, DangNhapComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
