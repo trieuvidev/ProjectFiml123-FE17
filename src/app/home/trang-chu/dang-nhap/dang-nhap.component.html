@@ -1,20 +1,157 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+<!-- <div class="modal fade" id="exampleModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
+ -->
+<!--Modal: Login / Register Form-->
+<div class="modal fade"  id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <li class="nav-item liLoginRegister">
+                        <a class="nav-link active aLoginRegister" data-toggle="tab" href="#panel7" role="tab"><i
+                                class="fas fa-user mr-1"></i>
+                            Đăng Nhập</a>
+                    </li>
+                    <li class="nav-item liLoginRegister">
+                        <a class="nav-link aLoginRegister" data-toggle="tab" href="#panel8" role="tab"><i
+                                class="fas fa-user-plus mr-1"></i>
+                            Đăng Ký</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                        <!--Body-->
+                        <div class="modal-body mb-1">
+                            <div class="md-form form-sm mb-5">
+                                <i class="fas fa-user prefix"></i>
+                                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                                <label data-error="wrong" data-success="right" for="modalLRInput10">Tên Đăng
+                                    Nhập</label>
+                            </div>
+
+                            <div class="md-form form-sm mb-4">
+                                <i class="fas fa-lock prefix"></i>
+                                <input type="password" id="modalLRInput11"
+                                    class="form-control form-control-sm validate">
+                                <label data-error="wrong" data-success="right" for="modalLRInput11">Mật Khẩu</label>
+                            </div>
+                            <div class="text-center mt-2">
+                                <button class="btn btn-info">Đăng Nhập</button>
+                            </div>
+                        </div>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <!-- <div class="options text-center text-md-right mt-1">
+                                <p>Not a member? <a href="">Sign Up</a></p>
+                                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                            </div> -->
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                                data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                    <!--Panel 8-->
+                    <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                        <!--Body-->
+                        <div class="modal-body">
+                            <form #dangKyForm="ngForm" (ngSubmit)="handelDangKy(dangKyForm.value)">
+                                <div class="md-form form-sm mb-5 form-group">
+                                    <i class="fas fa-user-circle prefix"></i>
+                                    <input type="text" name="HoTen" ngModel id="modalLRInput12"
+                                        class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput12">Họ và
+                                        Tên</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-5">
+                                    <i class="fas fa-phone prefix"></i>
+                                    <input type="number" name="SoDT" ngModel id="modalLRInput12"
+                                        class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput12">Số Điện
+                                        Thoại</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-5">
+                                    <i class="fas fa-user prefix"></i>
+                                    <input type="text" ngModel name="TaiKhoan" id="modalLRInput12"
+                                        class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput12">Tên Đăng
+                                        Nhập</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-5">
+                                    <i class="fas fa-envelope prefix"></i>
+                                    <input type="email" ngModel name="Email" id="modalLRInput12"
+                                        class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput12">Email</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-5">
+                                    <i class="fas fa-lock prefix"></i>
+                                    <input type="password" ngModel name="MatKhau" id="modalLRInput13"
+                                        class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput13">Mật Khẩu</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-4">
+                                    <i class="fas fa-lock prefix"></i>
+                                    <input type="password" ngModal name="MatKhau" id="modalLRInput14"
+                                        class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput14">Xác Nhận Mật
+                                        Khẩu</label>
+                                </div>
+
+                                <div class="text-center form-sm mt-2">
+                                    <button class="btn btn-info" (change)="closeSubmit($event)" type="submit">Đăng Ký</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <!-- <div class="options text-right">
+                                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                            </div> -->
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                                data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    <!--/.Panel 8-->
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
 </div>
-<a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Đăng Nhập</a>
+<!--Modal: Login / Register Form-->

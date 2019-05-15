@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DangKyService {
 
-  constructor() { }
+  dangKyNguoiDung(nguoiDung: any): Observable <any> {
+    const url = `http://svcy2.myclass.vn/api/QuanLyNguoiDung/ThemNguoiDung`;
+    return this.http.post(url, nguoiDung, {
+      headers: {'Content-Type': 'application/json;charset=UTF-8'}
+    } );
+
+  }
+  constructor(private http: HttpClient) { }
 }
