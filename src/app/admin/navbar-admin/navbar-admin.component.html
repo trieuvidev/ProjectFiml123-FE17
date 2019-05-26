@@ -1,0 +1,30 @@
+<section id="myNavbar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 nav_left">
+                <div class="menu_left">
+                    <ul class="ul_menu_left flex-container column">
+                        <li><a (click)="chonMenu('ThongKe')" ><button type="button" class="btn btn-info">Thống
+                                    Kê</button></a></li>
+                        <li><a (click)="chonMenu('QLPhim')"><button type="button"
+                                    class="btn btn-info">Quản Lý Phim</button></a></li>
+                        <li><a (click)="chonMenu('QLNguoiDung')"><button type="button" class="btn btn-info">Người Dùng</button></a></li>
+                        <!-- <li><a (click)="chonMenu('Quan')"><button type="button" class="btn btn-info">Quản Trị</button></a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 nav_right" [ngSwitch]="menuAdminComponent">
+                <div class="w-100" *ngSwitchCase="'ThongKe'">
+                    <app-thong-ke></app-thong-ke>
+                </div>
+                <div class="w-100"  *ngSwitchCase="'QLPhim'">
+                    <app-quan-ly-phim></app-quan-ly-phim>
+                </div>
+                <div class="w-100"  *ngSwitchCase="'QLNguoiDung'">
+                    <app-quan-ly-nguoi-dung></app-quan-ly-nguoi-dung>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

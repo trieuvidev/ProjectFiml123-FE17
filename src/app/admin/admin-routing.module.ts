@@ -4,6 +4,7 @@ import { QuanLyNguoiDungComponent } from './quan-ly-nguoi-dung/quan-ly-nguoi-dun
 import { QuanLyPhimComponent } from './quan-ly-phim/quan-ly-phim.component';
 import { QuanLyLichChieuComponent } from './quan-ly-lich-chieu/quan-ly-lich-chieu.component';
 import { AdminComponent } from './admin.component';
+import { ThongKeComponent } from './thong-ke/thong-ke.component';
 
 
 const routesAdmin: Routes = [
@@ -11,7 +12,8 @@ const routesAdmin: Routes = [
     {path: 'admin', component: AdminComponent},
     {path: 'quan-ly-lich-chieu', component: QuanLyLichChieuComponent},
     {path: 'quan-ly-nguoi-dung', component: QuanLyNguoiDungComponent},
-    {path: 'quan-ly-phim', component: QuanLyPhimComponent}
+    {path: 'quan-ly-phim', component: QuanLyPhimComponent},
+    {path: 'thong-ke', component: ThongKeComponent}
   ]}
 ];
 @NgModule({

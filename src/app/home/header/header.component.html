@@ -29,8 +29,8 @@
               <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
             </li>
             <li class="nav-item">
-              <!-- <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Đăng Nhập</a> -->
-              <a class="nav-link" data-toggle="modal" data-target="#modalLRForm">Đăng Nhập</a>
+              <a class="nav-link" (click)="dangXuat()" data-toggle="modal" data-target="#modalLRForm" *ngIf="isShowName">{{isShowName}}</a>
+              <!-- <a class="nav-link" *ngIf="isShowDangXuat" data-toggle="modal" data-target="#modalDangXuat">Đăng Xuất</a> -->
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">VN</a>
