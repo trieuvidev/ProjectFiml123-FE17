@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { $ } from 'jquery';
+import { Router } from '@angular/router';
 declare var $: any;
 import { from } from 'rxjs';
 @Component({
@@ -9,9 +10,14 @@ import { from } from 'rxjs';
 })
 export class HeaderAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  DangXuat() {
+    localStorage.removeItem('loginUser');
+    this.router.navigate(['/login']);
   }
 
 }

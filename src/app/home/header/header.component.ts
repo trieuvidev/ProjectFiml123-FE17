@@ -11,23 +11,45 @@ declare var $: any;
 export class HeaderComponent implements OnInit {
   // @ViewChild(DangNhapComponent) DNCom: DangNhapComponent;
   constructor(private router: Router) { }
-  isShowName =  'Đăng Nhập';
+  isShowName: string;
+  isClass: string;
+  isShow: string;
   dangXuat() {
+    if (localStorage.getItem('loginUser')) {
+      this.isShowName = 'Đăng Xuất';
+    }
     localStorage.removeItem('loginUser');
-    this.isShowName = 'Đăng Xuất';
-    // $('[class*=\'modal-backdrop\']').css('display', 'none');
-    // $('[class*=\'show\']').css('display', 'none');
-    // $('[class*=\'fade\']').css('display', 'none');
-    // $('div').removeClass('modal-backdrop');
-    // $('#modalLRForm').modal('hide');
-    // $('div').removeClass('fade');
-    // this.router.navigate(['/home/trang-chu/']);
+    $('div').removeClass('isClass');
+    this.router.navigate(['/home']);
+    setTimeout(() => { $('#modalLRForm').modal(this.isShow); }, 2000);
+    console.log(this.isShow);
   }
+  nameParent(name) {
+    this.isShowName = name;
+  }
+  removeModal(classModal): any {
+    console.log(classModal);
+    setTimeout(() => {
+      $('div').removeClass(classModal); if (localStorage.getItem('loginUser')) {
+        this.isShowName = 'Đăng Xuất';
+      } else {
+        this.isShowName = 'Đăng Nhập';
+      }
+    }, 2000);
+
+  }
+
+  showModal(show) {
+    this.isShow = show;
+  }
+
+
   ngOnInit() {
     if (localStorage.getItem('loginUser')) {
       this.isShowName = 'Đăng Xuất';
     } else {
       this.isShowName = 'Đăng Nhập';
+
       return true;
     }
   }

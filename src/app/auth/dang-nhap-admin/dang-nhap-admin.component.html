@@ -1,0 +1,37 @@
+<section id="myDangNhapAdmin">
+  <div class="dangNhap">
+    <div class="card border-info">
+      <div class="card-header">
+        <span class="mx-auto">ĐĂNG NHẬP</span>
+      </div>
+      <div class="card-body">
+        <form #dangNhapAdmin="ngForm" (ngSubmit)="handelDangNhapAdmin(dangNhapAdmin.value)" class="form-group">
+          <div class=" md-form form-sm mb-5">
+            <i class="fas fa-user prefix"></i>
+            <input type="text" name="TaiKhoan" #TaiKhoan="ngModel" ngModel required
+              class="form-control form-control-sm validate">
+            <label data-error="wrong" data-success="right">Tên Đăng
+              Nhập</label>
+            <div *ngIf="TaiKhoan.errors && (TaiKhoan.touched || TaiKhoan.dirty)">
+              <p *ngIf="TaiKhoan.errors.required" class="alert alert-danger errors">* Vui lòng nhập tài khoản</p>
+            </div>
+          </div>
+
+          <div class="md-form form-sm mb-4">
+            <i class="fas fa-lock prefix"></i>
+            <input type="password" name="MatKhau" #MatKhau="ngModel" ngModel required
+              class="form-control form-control-sm validate">
+            <label data-error="wrong" data-success="right">Mật
+              Khẩu</label>
+              <div *ngIf="MatKhau.errors && (MatKhau.touched || TaiKhoan.dirty)">
+                  <p *ngIf="MatKhau.errors.required" class="alert alert-danger errors">* Vui lòng nhập tài khoản</p>
+                </div>
+          </div>
+          <div class="text-center mt-2">
+            <button class="btn btn-info" type="submit">Đăng Nhập</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

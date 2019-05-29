@@ -29,7 +29,7 @@
               <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" (click)="dangXuat()" data-toggle="modal" data-target="#modalLRForm" *ngIf="isShowName">{{isShowName}}</a>
+              <a class="nav-link" (click)="dangXuat()"  data-toggle="modal" data-target="#modalLRForm" *ngIf="isShowName">{{isShowName}}</a>
               <!-- <a class="nav-link" *ngIf="isShowDangXuat" data-toggle="modal" data-target="#modalDangXuat">Đăng Xuất</a> -->
             </li>
             <li class="nav-item">
@@ -44,4 +44,4 @@
     </div>
   </div>
 </section>
-<app-dang-nhap></app-dang-nhap>
+<app-dang-nhap (emitName) = "nameParent($event)" (emitClass)="removeModal($event)" (emitShowModal)= "showModal($event)"></app-dang-nhap>

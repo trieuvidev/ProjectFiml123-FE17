@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
+import { DSPhim } from '../../Model/phim';
 @Injectable({
   providedIn: 'root'
 })

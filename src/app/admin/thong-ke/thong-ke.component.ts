@@ -9,6 +9,8 @@ export class ThongKeComponent implements OnInit {
 
   constructor() { }
 
+  // tslint:disable-next-line:member-ordering
+
   ngOnInit() {
   }
 

@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { QuanLyNguoiDungComponent } from './quan-ly-nguoi-dung/quan-ly-nguoi-dung.component';
-import { QuanLyPhimComponent } from './quan-ly-phim/quan-ly-phim.component';
-import { QuanLyLichChieuComponent } from './quan-ly-lich-chieu/quan-ly-lich-chieu.component';
 import { AdminComponent } from './admin.component';
-import { ThongKeComponent } from './thong-ke/thong-ke.component';
+import { AdminGuardService } from '../Share/guard/admin-guard';
+import { from } from 'rxjs';
 
 
 const routesAdmin: Routes = [
-  {path: '', component: AdminComponent, children: [
+  {path: '', component: AdminComponent, canActivate: [AdminGuardService], children: [
     {path: 'admin', component: AdminComponent},
-    {path: 'quan-ly-lich-chieu', component: QuanLyLichChieuComponent},
-    {path: 'quan-ly-nguoi-dung', component: QuanLyNguoiDungComponent},
-    {path: 'quan-ly-phim', component: QuanLyPhimComponent},
-    {path: 'thong-ke', component: ThongKeComponent}
+    // {path: 'quan-ly-lich-chieu', component: QuanLyLichChieuComponent},
+    // {path: 'quan-ly-nguoi-dung', component: QuanLyNguoiDungComponent},
+    // {path: 'quan-ly-phim', component: QuanLyPhimComponent},
+    // {path: 'thong-ke', component: ThongKeComponent},
   ]}
 ];
 @NgModule({
