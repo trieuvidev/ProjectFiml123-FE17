@@ -2,10 +2,10 @@
     <div class="modal-dialog cascading-modal" role="document">
         <!--Content-->
         <div class="modal-content">
-
+  
             <!--Modal cascading tabs-->
             <div class="modal-c-tabs">
-
+  
                 <!-- Nav tabs -->
                 <ul style="background-color: #32C787" class="nav nav-tabs md-tabs tabs-2 darken-3" role="tablist">
                     <li class="nav-item liLoginRegister">
@@ -19,12 +19,12 @@
                             Đăng Ký</a>
                     </li>
                 </ul>
-
+  
                 <!-- Tab panels -->
                 <div class="tab-content">
                     <!--Panel 7-->
                     <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-
+  
                         <!--Body-->
                         <div class="modal-body mb-1" id="modelDangNhap">
                             <form #dangNhapForm="ngForm" (ngSubmit)="handleDangNhap(dangNhapForm.value)">
@@ -35,7 +35,7 @@
                                     <label data-error="wrong" data-success="right" for="modalLRInput10">Tên Đăng
                                         Nhập</label>
                                 </div>
-
+  
                                 <div class="md-form form-sm mb-4">
                                     <i class="fas fa-lock prefix"></i>
                                     <input type="password" name="MatKhau" #MatKhau="ngModel" id="modalLRInput11"
@@ -47,7 +47,7 @@
                                     <button class="btn btn-info" type="submit">Đăng Nhập</button>
                                 </div>
                             </form>
-
+  
                         </div>
                         <!--Footer-->
                         <div class="modal-footer">
@@ -58,13 +58,13 @@
                             <button type="button" class="btn btn-outline-info waves-effect ml-auto"
                                 data-dismiss="modal">Close</button>
                         </div>
-
+  
                     </div>
                     <!--/.Panel 7-->
-
+  
                     <!--Panel 8-->
                     <div class="tab-pane fade" id="panel8" role="tabpanel">
-
+  
                         <!--Body-->
                         <div class="modal-body">
                             <form #dangKyForm="ngForm" (ngSubmit)="handelDangKy(dangKyForm.value)">
@@ -75,7 +75,7 @@
                                     <label data-error="wrong" data-success="right" for="modalLRInput12">Họ và
                                         Tên</label>
                                 </div>
-
+  
                                 <div class="md-form form-sm mb-5">
                                     <i class="fas fa-phone prefix"></i>
                                     <input type="number" name="SoDT" ngModel id="modalLRInput12"
@@ -83,7 +83,7 @@
                                     <label data-error="wrong" data-success="right" for="modalLRInput12">Số Điện
                                         Thoại</label>
                                 </div>
-
+  
                                 <div class="md-form form-sm mb-5">
                                     <i class="fas fa-user prefix"></i>
                                     <input type="text" ngModel name="TaiKhoan" id="modalLRInput12"
@@ -91,14 +91,14 @@
                                     <label data-error="wrong" data-success="right" for="modalLRInput12">Tên Đăng
                                         Nhập</label>
                                 </div>
-
+  
                                 <div class="md-form form-sm mb-5">
                                     <i class="fas fa-envelope prefix"></i>
                                     <input type="email" ngModel name="Email" id="modalLRInput12"
                                         class="form-control form-control-sm validate">
                                     <label data-error="wrong" data-success="right" for="modalLRInput12">Email</label>
                                 </div>
-
+  
                                 <div class="md-form form-sm mb-5">
                                     <i class="fas fa-lock prefix"></i>
                                     <input type="password" ngModel name="MatKhau" id="modalLRInput13"
@@ -106,7 +106,7 @@
                                     <label data-error="wrong" data-success="right" for="modalLRInput13">Mật
                                         Khẩu</label>
                                 </div>
-
+  
                                 <div class="md-form form-sm mb-4">
                                     <i class="fas fa-lock prefix"></i>
                                     <input type="password" ngModal name="MatKhau" id="modalLRInput14"
@@ -114,7 +114,7 @@
                                     <label data-error="wrong" data-success="right" for="modalLRInput14">Xác Nhận Mật
                                         Khẩu</label>
                                 </div>
-
+  
                                 <!-- <div class="md-form form-sm mb-4">
                                     <select class="form-control" id="exampleFormControlSelect1">
                                         <option value="" disabled selected >Bạn Là ?</option>
@@ -122,14 +122,14 @@
                                         <option ngModel name="MaLoaiNguoiDung" value="QuanTri">Quản Trị</option>
                                     </select>
                                 </div> -->
-
+  
                                 <div class="text-center form-sm mt-2">
                                     <button class="btn btn-info" (change)="closeSubmit($event)" type="submit">Đăng
                                         Ký</button>
                                 </div>
                             </form>
-
-
+  
+  
                         </div>
                         <!--Footer-->
                         <div class="modal-footer">
@@ -142,9 +142,8 @@
                     </div>
                     <!--/.Panel 8-->
                 </div>
-
+  
             </div>
         </div>
         <!--/.Content-->
     </div>
-    <!--Modal: Login / Register Form-->

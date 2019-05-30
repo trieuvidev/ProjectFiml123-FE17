@@ -9,13 +9,15 @@ import { HeaderAdminComponent } from './header-admin/header-admin.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { MaterialAngularModule } from '../Share/material-angular.module';
 import { ThongKeComponent } from './thong-ke/thong-ke.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   // tslint:disable-next-line:max-line-length
   declarations: [QuanLyNguoiDungComponent, QuanLyPhimComponent, QuanLyLichChieuComponent, AdminComponent, HeaderAdminComponent, NavbarAdminComponent, ThongKeComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MaterialAngularModule
+    MaterialAngularModule,
+    FormsModule
   ],
   exports: [
      QuanLyNguoiDungComponent, QuanLyPhimComponent, QuanLyLichChieuComponent

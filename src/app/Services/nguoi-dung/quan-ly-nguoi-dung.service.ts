@@ -10,7 +10,7 @@ export class QuanLyNguoiDungService {
 
   constructor(private http: HttpClient) { }
 
-  public LayDanhSachNguoiDung(nguoiDung: NguoiDung): Observable<NguoiDung[]> {
+  public LayDanhSachNguoiDung(): Observable<NguoiDung[]> {
     const url = 'http://svcy2.myclass.vn/api/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP09';
     return this.http.get<NguoiDung[]>(url);
   }

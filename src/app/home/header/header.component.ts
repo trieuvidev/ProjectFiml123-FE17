@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('loginUser');
     $('div').removeClass('isClass');
     this.router.navigate(['/home']);
-    setTimeout(() => { $('#modalLRForm').modal(this.isShow); }, 2000);
+    setTimeout(() => { $('#modalLRForm').modal(this.isShow); }, 400);
     console.log(this.isShow);
   }
   nameParent(name) {
